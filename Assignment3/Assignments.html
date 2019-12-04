@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <title>Assignments</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Index.html">BAKAS SCHOOL</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="Students.html">Students</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Courses.html">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Trainers.html">Trainers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Assignments.html">Assignments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="StudentsPerCourse.html">Students Per Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="TrainersPerCourse.html">Trainers Per Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AssignmentsPerCourse.html">Assignements Per Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AssignmentPerStdPerCrs.html">Assignments Per Student Per Course</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <h1>Assignments</h1>
+
+
+        <button id="abutton" data-toggle="collapse" class="btn btn-success" data-target="#AddAssignment">Add Assignment</button>
+
+        <form id="AddAssignment" class="collapse">
+
+            <div class="form-group">
+                <label>Title:</label>
+                <input type="text" name="title" class="form-control" value="" id="atitle" required="">
+                <span class="error_form" id="atitle_error_message"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Description:</label>
+                <input type="text" name="stream" class="form-control" value="" id="adescription" required="">
+                <span class="error_form" id="adescription_error_message"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Submission Date:</label>
+                <input type="date" name="stream" class="form-control" value="" id="asubmission" required=" min="01-01-2000">
+                <span class="error_form" id="asubmission_error_message"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Oral Mark:</label>
+                <input type="number" name="startdate" class="form-control" value="" id="aoral" required="" min="0" max="100">
+                <span class="error_form" id="aoral_error_message"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Total Mark:</label>
+                <input type="number" name="enddate" class="form-control" value="" id="atotal" required="" min="0" max="100">
+                <span class="error_form" id="atotal_error_message"></span>
+            </div>
+
+            <button type="submit" class="btn btn-success save-btn" id="save">Save</button>
+
+        </form>
+
+
+
+
+
+
+
+        <br />
+        <table class="table table-light assignment-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Submission Date</th>
+                    <th>Oral Mark</th>
+                    <th>Total Mark</th>
+                    <th width="200px">Action</th>
+                </tr>
+            </thead>
+            <tbody id="assignmentbody">
+            </tbody>
+        </table>
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <script src="mainassign.js"></script>
+</body>
+</html>
